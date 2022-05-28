@@ -5,7 +5,7 @@ from sklearn.tree import DecisionTreeClassifier
 import time
 import streamlit as st
 
-st.image("1vb.png")
+st.image("1vb_3.png")
 
 pw = st.text_input("Password:", type="password", value="xxx")
 
@@ -37,7 +37,7 @@ else:
         st.write("")
         st.write("Please download the output file by clicking the download button below.")
 
-        foo2 = foo.to_csv().encode('utf-8')
+        foo2 = foo.to_csv(index=False).encode('utf-8')
 
         st.download_button(label="Download data as CSV",
          data=foo2,
